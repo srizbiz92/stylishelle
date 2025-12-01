@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylishelle.com - Fashion & Beauty Domain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fefefe;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #01dee6 0%, #ff66e9 100%);
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(255, 102, 233, 0.3);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .domain-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.6rem;
+            color: #fff;
+            font-weight: 300;
+            margin-bottom: 35px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .availability {
+            display: inline-block;
+            background-color: #ff5412;
+            color: #fff;
+            padding: 10px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(255, 84, 18, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .availability:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 84, 18, 0.5);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 90px 0;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #ff66e9;
+            position: relative;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(to right, #01dee6, #ff66e9);
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Domain Showcase */
+        .domain-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .domain-card {
+            background: linear-gradient(135deg, #01dee6 0%, #ff66e9 100%);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(1, 222, 230, 0.3);
+            color: #fff;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: #fbf608;
+        }
+
+        .domain-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .domain-card p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .domain-features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            gap: 30px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            width: 30%;
+            min-width: 280px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+
+        .feature:nth-child(1):before {
+            background-color: #01dee6;
+        }
+
+        .feature:nth-child(2):before {
+            background-color: #ff66e9;
+        }
+
+        .feature:nth-child(3):before {
+            background-color: #ff5412;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature:nth-child(1) i {
+            color: #01dee6;
+        }
+
+        .feature:nth-child(2) i {
+            color: #ff66e9;
+        }
+
+        .feature:nth-child(3) i {
+            color: #ff5412;
+        }
+
+        .feature h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .feature p {
+            color: #555;
+        }
+
+        /* Form Styles */
+        .enquiry-form {
+            background-color: #f8f8f8;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .enquiry-form:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #01dee6, #ff66e9, #ff5412, #fbf608);
+        }
+
+        .form-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #01dee6;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #ff66e9;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #444;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff66e9;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 102, 233, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #ff5412, #ff66e9);
+            color: #fff;
+            border: none;
+            padding: 20px 45px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(255, 102, 233, 0.4);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 102, 233, 0.5);
+            background: linear-gradient(to right, #ff66e9, #ff5412);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #01dee6, #ff66e9, #ff5412, #fbf608);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: #fbf608;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: #01dee6;
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: #aaa;
+        }
+
+        .gold-text {
+            color: #fbf608;
+            font-weight: 700;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: rgba(1, 222, 230, 0.1);
+            color: #01a1a8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-left: 5px solid #01dee6;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Color Highlights */
+        .teal-highlight {
+            color: #01dee6;
+        }
+
+        .pink-highlight {
+            color: #ff66e9;
+        }
+
+        .orange-highlight {
+            color: #ff5412;
+        }
+
+        .gold-highlight {
+            color: #fbf608;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .domain-name {
+                font-size: 3.5rem;
+            }
+            
+            .domain-card h2 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .domain-name {
+                font-size: 3rem;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+            }
+            
+            .domain-card {
+                padding: 40px 30px;
+            }
+            
+            .domain-card h2 {
+                font-size: 2.8rem;
+            }
+            
+            .feature {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto 30px;
+            }
+            
+            .form-container {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .domain-name {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .domain-card h2 {
+                font-size: 2.3rem;
+                letter-spacing: 2px;
+            }
+            
+            .domain-card p {
+                font-size: 1.1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domain-name {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.9rem;
+            }
+            
+            .domain-card {
+                padding: 30px 20px;
+            }
+            
+            .domain-card h2 {
+                font-size: 1.9rem;
+                letter-spacing: 1px;
+            }
+            
+            .form-title {
+                font-size: 1.8rem;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <h1 class="domain-name">stylishelle.com</h1>
+            <p class="tagline">The perfect domain for your <span class="gold-highlight">fashion</span>, <span class="teal-highlight">clothing</span>, or <span class="pink-highlight">beauty</span> brand</p>
+            <div class="availability">Available for Acquisition</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">Why <span class="pink-highlight">Stylishelle</span>.com?</h2>
+            
+            <div class="domain-showcase">
+                <div class="domain-card">
+                    <h2>stylishelle.com</h2>
+                    <p>A memorable and elegant name that combines <span class="gold-highlight">"style"</span> with the fashionable name <span class="pink-highlight">"Elle"</span> – perfect for a luxury fashion brand, beauty influencer, or clothing boutique.</p>
+                </div>
+            </div>
+
+            <div class="domain-features">
+                <div class="feature">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Fashion & Apparel</h3>
+                    <p>Ideal for clothing brands, fashion blogs, or online boutiques. The name evokes <span class="orange-highlight">style and elegance</span> with a modern twist.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-spa"></i>
+                    <h3>Beauty & Cosmetics</h3>
+                    <p>Perfect for beauty influencers, cosmetic brands, or skincare lines. <span class="pink-highlight">"Elle"</span> adds a feminine, sophisticated touch that appeals to beauty audiences.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <h3>Brand Recognition</h3>
+                    <p>Easy to remember, spell, and pronounce. Creates an instant connection with <span class="teal-highlight">fashion-forward</span> audiences seeking style inspiration.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Enquiry Form Section -->
+    <section class="enquiry-form">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Acquire This <span class="pink-highlight">Domain</span></h2>
+                
+                <div id="success-message" class="success-message">
+                    <i class="fas fa-check-circle"></i> Thank you for your enquiry! We will contact you shortly.
+                </div>
+                
+                <!-- Formspree Form - Will submit to your email -->
+                <form id="enquiry-form" action="https://formspree.io/f/xbjnevlg" method="POST">
+                    <input type="hidden" name="_subject" value="StylishelleEnquiry">
+                    <input type="hidden" name="_replyto" value="srizbiz92@gmail.com">
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope teal-highlight"></i> Email Address <span class="orange-highlight">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile"><i class="fas fa-mobile-alt pink-highlight"></i> Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="+1 (123) 456-7890">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description"><i class="fas fa-edit gold-highlight"></i> Your Interest / Description <span class="orange-highlight">*</span></label>
+                        <textarea id="description" name="description" required placeholder="Please describe your interest in the domain stylishelle.com, your intended use, and any questions you may have..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-info-circle"></i> About This Domain</a>
+                <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Purchase Info</a>
+            </div>
+            <p class="copyright">© 2023 <span class="gold-text">Stylishelle.com</span> - Fashion & Beauty Domain Showcase. This premium domain is listed for sale.</p>
+            <p class="copyright">/p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Simple form validation
+            const email = document.getElementById('email').value;
+            const description = document.getElementById('description').value;
+            
+            if (!email || !description) {
+                alert('Please fill in all required fields (email and description).');
+                return;
+            }
+            
+            // Show loading state on button
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Submit form using fetch API
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('success-message').style.display = 'block';
+                    document.getElementById('enquiry-form').reset();
+                    
+                    // Scroll to success message
+                    document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                } else {
+                    alert('There was an error submitting your enquiry. Please try again.');
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your enquiry. Please try again.');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+        
+        // Add visual feedback to form inputs
+        const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
