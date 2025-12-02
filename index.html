@@ -1,859 +1,750 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stylishelle.com - Premium Fashion &amp; Beauty Domain For Sale</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stylishelle.com – Premium Fashion & Beauty Domain For Sale</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #ffffff;
-      color: #2c2c2c;
-      width: 100%;
-      overflow-x: hidden;
+    :root {
+      --soft-rose: #fdf3f7;
+      --soft-lilac: #f7ecff;
+      --blush: #e872a9;
+      --peach: #f4b39a;
+      --deep-plum: #3b1b36;
+      --text-main: #3f3a3c;
+      --text-muted: #7b6f78;
+      --card-bg: #ffffff;
+      --border-soft: rgba(0, 0, 0, 0.06);
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Hero Section */
-    .hero-section {
-      position: relative;
-      width: 100%;
-      min-height: 100%;
-      background: linear-gradient(135deg, #faf8f6 0%, #fff5f7 100%);
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, var(--soft-lilac), var(--soft-rose));
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      padding: 24px 16px 40px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 80px 5%;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1080px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9));
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+      padding: 26px 20px 32px;
+      position: relative;
       overflow: hidden;
     }
 
-    .hero-bg-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.15;
-      z-index: 1;
+    @media (min-width: 900px) {
+      .page {
+        padding: 32px 32px 40px;
+      }
     }
 
-    /* Abstract Fashion Background using SVG */
-    .hero-bg-pattern {
+    /* Soft background orbs */
+    .orb {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      opacity: 0.6;
+      border-radius: 999px;
+      filter: blur(70px);
+      opacity: 0.7;
+      z-index: -1;
     }
 
-    .glow-orb {
-      position: absolute;
+    .orb-1 {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(232, 114, 169, 0.35), transparent 70%);
+      top: -120px;
+      right: -60px;
+    }
+
+    .orb-2 {
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(244, 179, 154, 0.3), transparent 70%);
+      bottom: -80px;
+      left: -40px;
+    }
+
+    .orb-3 {
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(247, 236, 255, 0.7), transparent 70%);
+      top: 30%;
+      left: 45%;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      filter: blur(100px);
-      z-index: 2;
+      background: conic-gradient(from 210deg, var(--blush), var(--peach), var(--soft-lilac), var(--blush));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
-    .glow-1 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(255, 182, 193, 0.2), transparent);
-      top: -100px;
-      right: 10%;
-      animation: float 8s ease-in-out infinite;
+    .logo-circle span {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      color: var(--deep-plum);
+      font-size: 22px;
     }
 
-    .glow-2 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(200, 162, 200, 0.15), transparent);
-      bottom: -50px;
-      left: 5%;
-      animation: float 10s ease-in-out infinite 2s;
+    .logo-text-main {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
-    .glow-3 {
-      width: 350px;
-      height: 350px;
-      background: radial-gradient(circle, rgba(218, 165, 32, 0.15), transparent);
-      top: 40%;
-      left: 50%;
-      animation: float 12s ease-in-out infinite 4s;
+    .logo-text-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
     }
 
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(30px, -30px); }
+    .tag-pill {
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      background: rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      backdrop-filter: blur(10px);
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-      max-width: 1100px;
+    .tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #34c759, #0b7a34);
+      box-shadow: 0 0 10px rgba(52, 199, 89, 0.9);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr);
+      gap: 26px;
+    }
+
+    @media (min-width: 920px) {
+      main {
+        grid-template-columns: minmax(0, 7fr);
+      }
+    }
+
+    /* Hero section */
+    .hero {
+      border-radius: 22px;
+      padding: 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(253, 243, 247, 0.96), rgba(247, 236, 255, 0.94));
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 50px rgba(232, 114, 169, 0.16);
+      margin-bottom: 24px;
+    }
+
+    .hero-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
     }
 
     .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 4.5em;
-      font-weight: 700;
-      margin: 0 0 30px 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(30px, 4vw, 38px);
       line-height: 1.2;
-      background: linear-gradient(135deg, #2c2c2c 0%, #d4849e 50%, #c8963e 100%);
+      margin-bottom: 12px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, var(--blush), var(--peach));
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       background-clip: text;
+      color: transparent;
     }
 
     .hero-subtitle {
-      font-size: 1.4em;
-      font-weight: 300;
-      color: rgba(44, 44, 44, 0.75);
-      margin: 0 0 40px 0;
-      line-height: 1.6;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
-    /* About Section */
-    .about-section {
-      width: 100%;
-      padding: 100px 5%;
-      background: linear-gradient(180deg, #ffffff 0%, #faf8f6 100%);
-      position: relative;
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
     }
 
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .about-box {
+    .hero-tag {
+      font-size: 11px;
+      padding: 5px 11px;
+      border-radius: 999px;
       background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(212, 132, 158, 0.2);
-      border-radius: 20px;
-      padding: 60px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 60px rgba(212, 132, 158, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      color: var(--text-muted);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .hero-card {
+      border-radius: 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      padding: 14px 13px 13px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .hero-card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: var(--deep-plum);
+    }
+
+    /* About section */
+    .about-section {
+      margin-bottom: 28px;
     }
 
     .about-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      font-weight: 600;
-      margin: 0 0 30px 0;
-      color: #d4849e;
-      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--deep-plum);
     }
 
-    .about-description {
-      font-size: 1.2em;
+    .about-text {
+      font-size: 14px;
       line-height: 1.8;
-      color: rgba(44, 44, 44, 0.8);
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
+      color: var(--text-muted);
+      max-width: 780px;
     }
 
-    /* Inspiration Gallery Section */
+    /* Gallery */
     .gallery-section {
-      width: 100%;
-      padding: 100px 5%;
-      background: #fff5f7;
-      position: relative;
-    }
-
-    .gallery-container {
-      max-width: 1400px;
-      margin: 0 auto;
+      margin: 24px 0 28px;
     }
 
     .gallery-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      font-weight: 600;
-      text-align: center;
-      margin: 0 0 60px 0;
-      color: #2c2c2c;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--deep-plum);
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
     }
 
     .gallery-item {
       position: relative;
-      border-radius: 15px;
+      border-radius: 16px;
       overflow: hidden;
-      aspect-ratio: 4/5;
-      background: linear-gradient(135deg, rgba(255, 182, 193, 0.08), rgba(200, 162, 200, 0.08));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(212, 132, 158, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: linear-gradient(135deg, rgba(232, 114, 169, 0.12), rgba(247, 236, 255, 0.5));
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      padding: 18px 12px 14px;
+      text-align: center;
     }
 
-    .gallery-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 30px 60px rgba(212, 132, 158, 0.15);
-    }
-
-    .gallery-icon {
-      font-size: 4em;
-      opacity: 0.3;
+    .gallery-emoji {
+      font-size: 26px;
+      margin-bottom: 6px;
     }
 
     .gallery-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 20px;
-      background: linear-gradient(to top, rgba(255, 255, 255, 0.95), transparent);
-      font-size: 1.1em;
+      font-size: 13px;
       font-weight: 500;
-      text-align: center;
-      color: #2c2c2c;
+      color: var(--deep-plum);
     }
 
-    /* Features Section */
+    /* Features */
     .features-section {
-      width: 100%;
-      padding: 100px 5%;
-      background: linear-gradient(180deg, #faf8f6 0%, #ffffff 100%);
-      position: relative;
-    }
-
-    .features-container {
-      max-width: 1300px;
-      margin: 0 auto;
+      margin-bottom: 26px;
     }
 
     .features-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      font-weight: 600;
-      text-align: center;
-      margin: 0 0 70px 0;
-      color: #c8963e;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--deep-plum);
     }
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
     }
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(212, 132, 158, 0.2);
-      border-radius: 20px;
-      padding: 40px 30px;
-      text-align: center;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 182, 193, 0.08), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(212, 132, 158, 0.4);
-      box-shadow: 0 20px 50px rgba(212, 132, 158, 0.15);
-    }
-
-    .feature-card:hover::before {
-      opacity: 1;
+      border-radius: 18px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      padding: 16px 13px 15px;
+      text-align: left;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.03);
     }
 
     .feature-icon {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      display: block;
+      font-size: 22px;
+      margin-bottom: 6px;
     }
 
     .feature-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6em;
-      font-weight: 600;
-      margin: 0 0 15px 0;
-      color: #d4849e;
+      font-family: "Playfair Display", serif;
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: var(--deep-plum);
     }
 
-    .feature-description {
-      font-size: 1em;
-      line-height: 1.7;
-      color: rgba(44, 44, 44, 0.7);
-      margin: 0;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      width: 100%;
-      padding: 120px 5%;
-      background: linear-gradient(135deg, #fff5f7 0%, #faf8f6 100%);
-      position: relative;
-      text-align: center;
-    }
-
-    .cta-glow {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(218, 165, 32, 0.1), transparent);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      filter: blur(120px);
-      z-index: 1;
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 10;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .cta-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
-      font-weight: 700;
-      margin: 0 0 30px 0;
-      color: #2c2c2c;
-    }
-
-    .cta-subtext {
-      font-size: 1.3em;
-      color: rgba(44, 44, 44, 0.7);
-      margin: 0 0 50px 0;
+    .feature-text {
+      font-size: 13px;
+      color: var(--text-muted);
       line-height: 1.6;
     }
 
-    .cta-button {
-      display: inline-block;
-      padding: 20px 60px;
-      font-size: 1.2em;
-      font-weight: 600;
-      color: #ffffff;
-      background: linear-gradient(135deg, #d4849e, #c8963e);
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(212, 132, 158, 0.3);
+    /* CTA + Offer form */
+    .cta-section {
+      margin-top: 4px;
+      padding: 18px 16px 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(232, 114, 169, 0.12), rgba(244, 179, 154, 0.1));
+      border: 1px solid rgba(232, 114, 169, 0.25);
+      box-shadow: 0 18px 40px rgba(232, 114, 169, 0.15);
     }
 
-    .cta-button:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 50px rgba(212, 132, 158, 0.4);
-      background: linear-gradient(135deg, #c8963e, #d4849e);
+    .cta-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--deep-plum);
     }
 
-    /* Footer */
-    .footer {
-      width: 100%;
-      padding: 40px 5%;
+    .cta-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .success-message {
+      display: none;
+      margin: 0 0 12px;
+      font-size: 13px;
+      color: #155724;
+      background: #d4edda;
+      border: 1px solid #c3e6cb;
+      padding: 8px 10px;
+      border-radius: 8px;
+    }
+
+    form.offer-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    @media (min-width: 640px) {
+      form.offer-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      form.offer-form .full-width {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    label {
+      font-size: 12px;
+      color: var(--deep-plum);
+      font-weight: 500;
+    }
+
+    label span.req {
+      color: var(--blush);
+      margin-left: 3px;
+    }
+
+    input,
+    textarea {
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 9px 12px;
+      font-size: 13px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--text-main);
+    }
+
+    textarea {
+      border-radius: 14px;
+      resize: vertical;
+      min-height: 80px;
+      line-height: 1.5;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(123, 111, 120, 0.6);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--blush);
+      box-shadow: 0 0 0 1px rgba(232, 114, 169, 0.4);
       background: #ffffff;
+    }
+
+    .cta-footer-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    @media (min-width: 640px) {
+      .cta-footer-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .btn-submit {
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blush), var(--peach));
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 20px;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(232, 114, 169, 0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .btn-submit:hover {
+      filter: brightness(1.03);
+      transform: translateY(-1px);
+    }
+
+    .small-note {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--text-muted);
       text-align: center;
-      border-top: 1px solid rgba(44, 44, 44, 0.1);
-    }
-
-    .footer-text {
-      font-size: 0.9em;
-      color: rgba(44, 44, 44, 0.5);
-      margin: 0;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5em;
-      }
-
-      .hero-subtitle {
-        font-size: 1.1em;
-      }
-
-      .about-box {
-        padding: 40px 30px;
-      }
-
-      .about-heading,
-      .gallery-heading,
-      .features-heading {
-        font-size: 2.2em;
-      }
-
-      .cta-heading {
-        font-size: 2.5em;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body>
-  <!-- Hero Section -->
-  <section class="hero-section">
-   <div class="glow-orb glow-1"></div>
-   <div class="glow-orb glow-2"></div>
-   <div class="glow-orb glow-3"></div>
-   <div class="hero-content">
-    <h1 class="hero-title" id="heroTitle">Stylishelle.com – Premium Fashion &amp; Beauty Domain For Sale</h1>
-    <p class="hero-subtitle" id="heroSubtitle">Perfect for fashion brands, beauty products, influencer branding, online boutiques, or cosmetics businesses.</p>
-   </div>
-  </section>
+</head>
+<body>
 
-  <!-- About Section -->
-  <section class="about-section">
-   <div class="about-container">
-    <div class="about-box">
-     <h2 class="about-heading" id="aboutHeading">About This Domain</h2>
-     <p class="about-description" id="aboutDescription">
-       Stylishelle.com is a rare, premium domain name that combines elegance, memorability, and instant brand recognition. The name seamlessly blends
-       "stylish" with a feminine, sophisticated ending—making it ideal for luxury fashion labels, cosmetics lines, beauty influencers, lifestyle blogs,
-       and e-commerce boutiques. Short, catchy, and social-media ready, this domain offers exceptional branding potential in the competitive fashion
-       and beauty industries.
-     </p>
-    </div>
-   </div>
-  </section>
+  <div class="page">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
 
-  <!-- Inspiration Gallery Section -->
-  <section class="gallery-section">
-   <div class="gallery-container">
-    <h2 class="gallery-heading">Brand Inspiration &amp; Possibilities</h2>
-    <div class="gallery-grid">
-     <div class="gallery-item">
-      <span class="gallery-icon">👗</span>
-      <div class="gallery-label">High Fashion Apparel</div>
-     </div>
-     <div class="gallery-item">
-      <span class="gallery-icon">💄</span>
-      <div class="gallery-label">Luxury Cosmetics</div>
-     </div>
-     <div class="gallery-item">
-      <span class="gallery-icon">✨</span>
-      <div class="gallery-label">Skincare &amp; Wellness</div>
-     </div>
-     <div class="gallery-item">
-      <span class="gallery-icon">👜</span>
-      <div class="gallery-label">Designer Accessories</div>
-     </div>
-     <div class="gallery-item">
-      <span class="gallery-icon">🌸</span>
-      <div class="gallery-label">Beauty Influencer</div>
-     </div>
-     <div class="gallery-item">
-      <span class="gallery-icon">💎</span>
-      <div class="gallery-label">Luxury Jewelry</div>
-     </div>
-    </div>
-   </div>
-  </section>
+    <header>
+      <div class="logo-mark">
+        <div class="logo-circle"><span>S</span></div>
+        <div>
+          <div class="logo-text-main">Stylishelle.com</div>
+          <div class="logo-text-sub">Fashion · Beauty · Cosmetics</div>
+        </div>
+      </div>
+      <div class="tag-pill">
+        <span class="tag-dot"></span>
+        Premium domain · Direct owner sale
+      </div>
+    </header>
 
-  <!-- Features Section -->
-  <section class="features-section">
-   <div class="features-container">
-    <h2 class="features-heading">Why This Domain is Valuable</h2>
-    <div class="features-grid">
-     <div class="feature-card">
-      <span class="feature-icon">🎯</span>
-      <h3 class="feature-title" id="feature1Title">Short &amp; Memorable</h3>
-      <p class="feature-description" id="feature1Desc">
-        Easy to spell, pronounce, and remember. Perfect for word-of-mouth marketing and brand recall.
-      </p>
-     </div>
-     <div class="feature-card">
-      <span class="feature-icon">👑</span>
-      <h3 class="feature-title" id="feature2Title">Luxury Appeal</h3>
-      <p class="feature-description" id="feature2Desc">
-        The name evokes elegance, femininity, and high-end sophistication—ideal for premium positioning.
-      </p>
-     </div>
-     <div class="feature-card">
-      <span class="feature-icon">📱</span>
-      <h3 class="feature-title" id="feature3Title">Social Media Ready</h3>
-      <p class="feature-description" id="feature3Desc">
-        Catchy and Instagram-friendly, making it perfect for influencer branding and digital marketing.
-      </p>
-     </div>
-     <div class="feature-card">
-      <span class="feature-icon">🌟</span>
-      <h3 class="feature-title" id="feature4Title">Strong Brand Identity</h3>
-      <p class="feature-description" id="feature4Desc">
-        Instantly communicates style, beauty, and fashion—creating immediate brand recognition.
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-   <div class="cta-glow"></div>
-   <div class="cta-content">
-    <h2 class="cta-heading" id="ctaHeading">Ready to Own This Premium Domain?</h2>
-    <p class="cta-subtext">
-      Make an offer today and elevate your brand with Stylishelle.com—a name that embodies luxury, style, and timeless elegance.
-    </p>
-    <button class="cta-button" id="ctaButton" onclick="handleContact()">Make an Offer</button>
-   </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-   <p class="footer-text">© 2024 Stylishelle.com Domain Sale. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const defaultConfig = {
-      hero_title: "Stylishelle.com – Premium Fashion & Beauty Domain For Sale",
-      hero_subtitle: "Perfect for fashion brands, beauty products, influencer branding, online boutiques, or cosmetics businesses.",
-      about_heading: "About This Domain",
-      about_description:
-        "Stylishelle.com is a rare, premium domain name that combines elegance, memorability, and instant brand recognition. The name seamlessly blends \"stylish\" with a feminine, sophisticated ending—making it ideal for luxury fashion labels, cosmetics lines, beauty influencers, lifestyle blogs, and e-commerce boutiques. Short, catchy, and social-media ready, this domain offers exceptional branding potential in the competitive fashion and beauty industries.",
-      feature_1_title: "Short & Memorable",
-      feature_1_desc: "Easy to spell, pronounce, and remember. Perfect for word-of-mouth marketing and brand recall.",
-      feature_2_title: "Luxury Appeal",
-      feature_2_desc: "The name evokes elegance, femininity, and high-end sophistication—ideal for premium positioning.",
-      feature_3_title: "Social Media Ready",
-      feature_3_desc: "Catchy and Instagram-friendly, making it perfect for influencer branding and digital marketing.",
-      feature_4_title: "Strong Brand Identity",
-      feature_4_desc: "Instantly communicates style, beauty, and fashion—creating immediate brand recognition.",
-      cta_heading: "Ready to Own This Premium Domain?",
-      cta_button_text: "Make an Offer",
-      background_color: "#faf8f6",
-      accent_color_pink: "#d4849e",
-      accent_color_gold: "#c8963e",
-      text_color: "#2c2c2c",
-      font_family: "Playfair Display"
-    };
-
-    const element = {
-      defaultConfig,
-
-      onConfigChange: async (config) => {
-        const heroTitle = document.getElementById('heroTitle');
-        const heroSubtitle = document.getElementById('heroSubtitle');
-        const aboutHeading = document.getElementById('aboutHeading');
-        const aboutDescription = document.getElementById('aboutDescription');
-        const feature1Title = document.getElementById('feature1Title');
-        const feature1Desc = document.getElementById('feature1Desc');
-        const feature2Title = document.getElementById('feature2Title');
-        const feature2Desc = document.getElementById('feature2Desc');
-        const feature3Title = document.getElementById('feature3Title');
-        const feature3Desc = document.getElementById('feature3Desc');
-        const feature4Title = document.getElementById('feature4Title');
-        const feature4Desc = document.getElementById('feature4Desc');
-        const ctaHeading = document.getElementById('ctaHeading');
-        const ctaButton = document.getElementById('ctaButton');
-
-        const customFont = config.font_family || defaultConfig.font_family;
-        const baseFontStack = 'serif';
-
-        if (heroTitle) {
-          heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
-          heroTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
-        }
-
-        if (heroSubtitle) {
-          heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-        }
-
-        if (aboutHeading) {
-          aboutHeading.textContent = config.about_heading || defaultConfig.about_heading;
-          aboutHeading.style.fontFamily = `${customFont}, ${baseFontStack}`;
-          aboutHeading.style.color = config.accent_color_pink || defaultConfig.accent_color_pink;
-        }
-
-        if (aboutDescription) {
-          aboutDescription.textContent = config.about_description || defaultConfig.about_description;
-        }
-
-        if (feature1Title) {
-          feature1Title.textContent = config.feature_1_title || defaultConfig.feature_1_title;
-          feature1Title.style.fontFamily = `${customFont}, ${baseFontStack}`;
-          feature1Title.style.color = config.accent_color_pink || defaultConfig.accent_color_pink;
-        }
-
-        if (feature1Desc) {
-          feature1Desc.textContent = config.feature_1_desc || defaultConfig.feature_1_desc;
-        }
-
-        if (feature2Title) {
-          feature2Title.textContent = config.feature_2_title || defaultConfig.feature_2_title;
-          feature2Title.style.fontFamily = `${customFont}, ${baseFontStack}`;
-          feature2Title.style.color = config.accent_color_pink || defaultConfig.accent_color_pink;
-        }
-
-        if (feature2Desc) {
-          feature2Desc.textContent = config.feature_2_desc || defaultConfig.feature_2_desc;
-        }
-
-        if (feature3Title) {
-          feature3Title.textContent = config.feature_3_title || defaultConfig.feature_3_title;
-          feature3Title.style.fontFamily = `${customFont}, ${baseFontStack}`;
-          feature3Title.style.color = config.accent_color_pink || defaultConfig.accent_color_pink;
-        }
-
-        if (feature3Desc) {
-          feature3Desc.textContent = config.feature_3_desc || defaultConfig.feature_3_desc;
-        }
-
-        if (feature4Title) {
-          feature4Title.textContent = config.feature_4_title || defaultConfig.feature_4_title;
-          feature4Title.style.fontFamily = `${customFont}, ${baseFontStack}`;
-          feature4Title.style.color = config.accent_color_pink || defaultConfig.accent_color_pink;
-        }
-
-        if (feature4Desc) {
-          feature4Desc.textContent = config.feature_4_desc || defaultConfig.feature_4_desc;
-        }
-
-        if (ctaHeading) {
-          ctaHeading.textContent = config.cta_heading || defaultConfig.cta_heading;
-          ctaHeading.style.fontFamily = `${customFont}, ${baseFontStack}`;
-          ctaHeading.style.color = config.text_color || defaultConfig.text_color;
-        }
-
-        if (ctaButton) {
-          ctaButton.textContent = config.cta_button_text || defaultConfig.cta_button_text;
-        }
-
-        // Update color scheme
-        document.documentElement.style.setProperty('--bg-color', config.background_color || defaultConfig.background_color);
-        document.documentElement.style.setProperty('--accent-pink', config.accent_color_pink || defaultConfig.accent_color_pink);
-        document.documentElement.style.setProperty('--accent-gold', config.accent_color_gold || defaultConfig.accent_color_gold);
-      },
-
-      mapToCapabilities: (config) => ({
-        recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => {
-              config.background_color = value;
-              window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => config.accent_color_pink || defaultConfig.accent_color_pink,
-            set: (value) => {
-              config.accent_color_pink = value;
-              window.elementSdk.setConfig({ accent_color_pink: value });
-            }
-          },
-          {
-            get: () => config.accent_color_gold || defaultConfig.accent_color_gold,
-            set: (value) => {
-              config.accent_color_gold = value;
-              window.elementSdk.setConfig({ accent_color_gold: value });
-            }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => {
-              config.text_color = value;
-              window.elementSdk.setConfig({ text_color: value });
-            }
-          }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => {
-            config.font_family = value;
-            window.elementSdk.setConfig({ font_family: value });
-          }
-        },
-        fontSizeable: undefined
-      }),
-
-      mapToEditPanelValues: (config) => new Map([
-        ["hero_title", config.hero_title || defaultConfig.hero_title],
-        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
-        ["about_heading", config.about_heading || defaultConfig.about_heading],
-        ["about_description", config.about_description || defaultConfig.about_description],
-        ["feature_1_title", config.feature_1_title || defaultConfig.feature_1_title],
-        ["feature_1_desc", config.feature_1_desc || defaultConfig.feature_1_desc],
-        ["feature_2_title", config.feature_2_title || defaultConfig.feature_2_title],
-        ["feature_2_desc", config.feature_2_desc || defaultConfig.feature_2_desc],
-        ["feature_3_title", config.feature_3_title || defaultConfig.feature_3_title],
-        ["feature_3_desc", config.feature_3_desc || defaultConfig.feature_3_desc],
-        ["feature_4_title", config.feature_4_title || defaultConfig.feature_4_title],
-        ["feature_4_desc", config.feature_4_desc || defaultConfig.feature_4_desc],
-        ["cta_heading", config.cta_heading || defaultConfig.cta_heading],
-        ["cta_button_text", config.cta_button_text || defaultConfig.cta_button_text]
-      ])
-    };
-
-    // NEW handleContact with Formspree integration
-    function handleContact() {
-      // Overlay
-      const modal = document.createElement('div');
-      modal.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        padding: 20px;
-      `;
-
-      const modalContent = document.createElement('div');
-      modalContent.style.cssText = `
-        background: linear-gradient(135deg, #ffffff, #faf8f6);
-        padding: 50px;
-        border-radius: 20px;
-        max-width: 500px;
-        width: 100%;
-        border: 1px solid rgba(212, 132, 158, 0.3);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-      `;
-
-      // IMPORTANT: replace YOUR_FORM_ID with your real Formspree form ID
-      modalContent.innerHTML = `
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 2em; color: #d4849e; margin: 0 0 20px 0; text-align: center;">
-          Contact Seller
-        </h3>
-        <p style="color: rgba(44, 44, 44, 0.8); text-align: center; margin-bottom: 30px;">
-          Interested in Stylishelle.com? Please provide your contact details and offer amount.
+    <main>
+      <section class="hero">
+        <div class="hero-label">Available for acquisition</div>
+        <h1 class="hero-title">
+          A <span>brand-ready</span> name for your next fashion or beauty venture.
+        </h1>
+        <p class="hero-subtitle">
+          Stylishelle.com blends “stylish” with a soft, feminine sound – perfect for luxury
+          cosmetics, skincare, fashion labels, beauty influencers, salons, or online boutiques
+          that want a memorable, elegant brand identity.
         </p>
+        <div class="hero-tags">
+          <div class="hero-tag">Cosmetics &amp; makeup lines</div>
+          <div class="hero-tag">Skincare &amp; wellness brands</div>
+          <div class="hero-tag">Fashion &amp; accessories labels</div>
+          <div class="hero-tag">Beauty influencer or studio</div>
+        </div>
+
+        <div class="hero-grid">
+          <article class="hero-card">
+            <div class="hero-card-title">Short &amp; memorable</div>
+            <p>Easy to pronounce, easy to spell, and made for social media handles and packaging.</p>
+          </article>
+          <article class="hero-card">
+            <div class="hero-card-title">Feminine &amp; aspirational</div>
+            <p>Feels like a beauty house, a perfume line, or a premium salon under one strong name.</p>
+          </article>
+          <article class="hero-card">
+            <div class="hero-card-title">Perfect for visual branding</div>
+            <p>Works beautifully in logos, campaigns, and product photography across web and print.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2 class="about-heading">About this domain</h2>
+        <p class="about-text">
+          <strong>Stylishelle.com</strong> is a rare opportunity to secure a brandable, elegant name
+          in the fashion and beauty space. It has the softness of a high-end cosmetics brand with the
+          versatility to cover apparel, skincare, fragrance, accessories, and content-driven platforms
+          like blogs or influencer channels. If you’re building something beautiful, this name gives you
+          a strong, memorable foundation.
+        </p>
+      </section>
+
+      <section class="gallery-section">
+        <h2 class="gallery-heading">Brand inspiration &amp; possibilities</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-emoji">💄</div>
+            <div class="gallery-label">Makeup &amp; cosmetics line</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-emoji">🌸</div>
+            <div class="gallery-label">Skincare &amp; self-care rituals</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-emoji">👗</div>
+            <div class="gallery-label">Fashion boutique or label</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-emoji">💅</div>
+            <div class="gallery-label">Nail, spa or beauty studio</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-emoji">📸</div>
+            <div class="gallery-label">Influencer / content brand</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-emoji">✨</div>
+            <div class="gallery-label">Luxury lifestyle brand</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <h2 class="features-heading">Why Stylishelle.com is valuable</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-title">Clear positioning</div>
+            <p class="feature-text">
+              Instantly evokes style, beauty, and femininity — ideal for products and services aimed at a fashion-conscious audience.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Social-media friendly</div>
+            <p class="feature-text">
+              Works well as a handle, hashtag, or campaign name and looks great in bio links and profile headers.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🛍️</div>
+            <div class="feature-title">E-commerce ready</div>
+            <p class="feature-text">
+              Perfect foundation for an online shop, subscription box, or curated marketplace in beauty and fashion.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌟</div>
+            <div class="feature-title">Ownable identity</div>
+            <p class="feature-text">
+              A distinctive name you can fully own, build equity into, and develop into a long-term brand.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" id="offer">
+        <h2 class="cta-heading">Send your offer</h2>
+        <p class="cta-text">
+          Share a brief offer or tell how you plan to use Stylishelle.com. You’ll receive a reply directly by email.
+        </p>
+
+        <!-- Success message shown when redirected with ?submitted=true -->
+        <div id="success-msg" class="success-message">
+          Thank you! Your offer has been sent. You’ll receive a response soon.
+        </div>
+
+        <!-- Offer Form (FormSubmit) -->
         <form
-          id="contactForm"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          class="offer-form"
+          action="https://formsubmit.co/srizbiz92@gmail.com"
           method="POST"
-          style="display: flex; flex-direction: column; gap: 20px;"
         >
-          <!-- Subject line in the email you receive -->
-          <input type="hidden" name="_subject" value="Stylishelle Domain Offer:" />
+          <!-- Email setup -->
+          <input type="hidden" name="_subject" value="Stylishelle Domain Offer" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Redirect back to this page with submitted flag -->
+          <input type="hidden" name="_next" value="https://www.stylishelle.com/?submitted=true" />
 
-          <!-- Visitor's name -->
-          <label for="name" style="color: #2c2c2c; font-size: 0.9em;">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            style="padding: 15px; border-radius: 10px; border: 1px solid rgba(212, 132, 158, 0.3); background: rgba(255, 255, 255, 0.8); color: #2c2c2c; font-size: 1em;"
-          >
+          <div class="field-group">
+            <label for="name">
+              Name<span class="req">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+            />
+          </div>
 
-          <!-- Email address Formspree can reply to -->
-          <label for="email" style="color: #2c2c2c; font-size: 0.9em;">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="_replyto"
-            required
-            style="padding: 15px; border-radius: 10px; border: 1px solid rgba(212, 132, 158, 0.3); background: rgba(255, 255, 255, 0.8); color: #2c2c2c; font-size: 1em;"
-          >
+          <div class="field-group">
+            <label for="email">
+              Email address<span class="req">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
 
-          <!-- Offer -->
-          <label for="offer" style="color: #2c2c2c; font-size: 0.9em;">Your Offer (USD)</label>
-          <input
-            type="text"
-            id="offer"
-            name="offer"
-            required
-            style="padding: 15px; border-radius: 10px; border: 1px solid rgba(212, 132, 158, 0.3); background: rgba(255, 255, 255, 0.8); color: #2c2c2c; font-size: 1em;"
-          >
+          <div class="field-group">
+            <label for="offerAmount">
+              Your offer (USD)<span class="req">*</span>
+            </label>
+            <input
+              type="text"
+              id="offerAmount"
+              name="offer_amount"
+              placeholder="e.g. 1,000"
+              required
+            />
+          </div>
 
-          <!-- Optional message -->
-          <label for="message" style="color: #2c2c2c; font-size: 0.9em;">Message (optional)</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            style="padding: 15px; border-radius: 10px; border: 1px solid rgba(212, 132, 158, 0.3); background: rgba(255, 255, 255, 0.8); color: #2c2c2c; font-size: 1em; resize: vertical;"
-          ></textarea>
+          <div class="field-group">
+            <label for="whatsapp">
+              Mobile / WhatsApp (optional)
+            </label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="mobile_or_whatsapp"
+              placeholder="+44 7xxx xxxxxx"
+            />
+          </div>
 
-          <!-- Optional redirect after success
-          <input type="hidden" name="_next" value="https://www.stylishelle.com/thank-you.html" />
-          -->
+          <div class="field-group full-width">
+            <label for="message">
+              Message (optional)
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Share any details about your brand, timeline, or questions."
+            ></textarea>
+          </div>
 
-          <div style="display: flex; gap: 15px; margin-top: 10px;">
-            <button
-              type="submit"
-              style="flex: 1; padding: 15px; background: linear-gradient(135deg, #d4849e, #c8963e); color: #ffffff; border: none; border-radius: 50px; font-size: 1em; font-weight: 600; cursor: pointer;"
-            >
-              Submit Offer
+          <div class="cta-footer-row full-width">
+            <button type="submit" class="btn-submit">
+              <span>Submit offer</span>
+              <span>✉️</span>
             </button>
-            <button
-              type="button"
-              id="closeModal"
-              style="flex: 1; padding: 15px; background: rgba(44, 44, 44, 0.05); color: #2c2c2c; border: 1px solid rgba(44, 44, 44, 0.2); border-radius: 50px; font-size: 1em; font-weight: 600; cursor: pointer;"
-            >
-              Cancel
-            </button>
+            <p class="small-note">
+              Your details are used only to respond to this enquiry. No newsletters or resale of your data.
+            </p>
           </div>
         </form>
-      `;
+      </section>
+    </main>
 
-      modal.appendChild(modalContent);
-      document.body.appendChild(modal);
+    <footer>
+      © <span id="year"></span> Stylishelle.com – Fashion &amp; Beauty Domain.
+    </footer>
+  </div>
 
-      // Close button
-      document.getElementById('closeModal').addEventListener('click', () => {
-        document.body.removeChild(modal);
-      });
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Click outside modal to close
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          document.body.removeChild(modal);
-        }
-      });
-    }
-
-    if (window.elementSdk) {
-      window.elementSdk.init(element);
+    // Show success message if redirected with ?submitted=true
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("submitted") === "true") {
+      const successEl = document.getElementById("success-msg");
+      if (successEl) {
+        successEl.style.display = "block";
+      }
     }
   </script>
-
-  <!-- (Optional) Old Cloudflare script from previous host.
-       You can safely remove this for GitHub Pages if you want.
-  <script>(function(){ ... })();</script>
-  -->
- </body>
+</body>
 </html>
